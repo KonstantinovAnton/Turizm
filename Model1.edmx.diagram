@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="abeefe8ac259460bb7b239e5bc2eade1" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="hotels11Model.Country" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.Hotel" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.HotelComment" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.HotelImage" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.HotelOfTour" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.Tour" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.Type" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="hotels11Model.TypeOfTour" Width="1.5" PointX="8.25" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="hotels11Model.FK_Hotel_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="hotels11Model.FK_HotelComment_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="hotels11Model.FK_HotelImage_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="hotels11Model.FK_HotelOfTour_Hotel1" ManuallyRouted="false" />
+        <AssociationConnector Association="hotels11Model.FK_HotelOfTour_Tour1" ManuallyRouted="false" />
+        <AssociationConnector Association="hotels11Model.FK_TypeOfTour_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="hotels11Model.FK_TypeOfTour_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

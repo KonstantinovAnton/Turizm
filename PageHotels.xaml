@@ -1,0 +1,55 @@
+﻿<Page x:Class="Turizm.PageHotels"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Turizm"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="PageHotels"
+      FontFamily="Comic Sans MS">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="410"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0">
+            <DataGrid ColumnWidth="*" Name="dataGridHotels" Margin="0,2,0,-2" Height="410" AutoGenerateColumns="False"
+                      ScrollViewer.CanContentScroll="True" 
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                                                     
+                      >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Звезды" Binding="{Binding CountOfStars}"/>
+                    <DataGridTextColumn  Header="Страна" Binding="{Binding Country.Name}"/>
+                    <DataGridTextColumn Header="Кол-во туров" Binding="{Binding ToursHotel}"/>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="buttonEditHotel" Click="buttonEditHotel_Click" Foreground="White" Template="{StaticResource ButtonTemplate}">Редактировать</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+
+                                <Button Name="buttonDeleteHotel" Click="buttonDeleteHotel_Click" Foreground="White" Template="{StaticResource ButtonDeleteTemplate}">Удалить</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button Margin="0,20,0,0" Name="buttonAddHotel" Click="buttonAddHotel_Click" Width="200" Height="30" Foreground="White" Template="{StaticResource ButtonTemplate}">Добавить отель</Button>
+        </StackPanel>
+
+    </Grid>
+</Page>

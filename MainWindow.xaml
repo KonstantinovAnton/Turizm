@@ -1,0 +1,32 @@
+﻿<Window x:Class="Turizm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Turizm"
+        mc:Ignorable="d"
+        Title="ТурКомпания" FontFamily="Comic Sans MS" Height="550" Width="900"
+        ResizeMode="CanMinimize">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+          
+        </Grid.RowDefinitions>
+
+        
+            <StackPanel Orientation="Horizontal" Background="#445c93" Height="40" Grid.Row="0">
+               
+                <Button Click="Button_Click" FontSize="16" Foreground="White" Width="100" Margin="10,0,0,0" Height="25" Template="{StaticResource ButtonTemplate}">Отели</Button>
+                <Button Click="Button_Click_1" FontSize="16" Foreground="White" Width="100" Height="25" Margin="5,0,10,0" Template="{StaticResource ButtonTemplate}">Туры</Button>
+                <Label VerticalAlignment="Center" Foreground="White" FontSize="16">Путешествуй по России</Label>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Frame Name="frm" Grid.Row="1" NavigationUIVisibility="Hidden" Background="#8d99ae">
+            </Frame>
+        </StackPanel>
+       
+    </Grid>
+</Window>
